@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuddy - AI Fitness Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>💪 FitBuddy</h1>
+        <p>AI Fitness Plan Generator</p>
+    </header>
+
+    <main>
+    <h2>Create Your Fitness Plan</h2>
+    <p>Enter your details to generate a personalized plan.</p>
+
+    <form id="fitnessForm">
+
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <input type="number" id="age" placeholder="Enter your age" required>
+
+        <select id="goal" required>
+            <option value="">Select Fitness Goal</option>
+            <option value="General Fitness">General Fitness</option>
+            <option value="Strength">Strength</option>
+            <option value="Flexibility">Flexibility</option>
+            <option value="Endurance">Endurance</option>
+        </select>
+
+        <select id="level" required>
+            <option value="">Select Fitness Level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+
+        <select id="days" required>
+            <option value="">Workout Days Per Week</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <option value="4">4 Days</option>
+            <option value="5">5 Days</option>
+        </select>
+
+        <input type="number" id="time" placeholder="Available time (minutes)" required>
+
+        <button type="submit">Generate Fitness Plan 🤖</button>
+
+    </form>
+    <div id="result" class="result-box"></div>
+</main>
+<section class="chat-section">
+
+    <h2>🤖 Ask FitBuddy</h2>
+    <p>Ask questions about your workout plan.</p>
+
+    <input type="text" id="userQuestion" placeholder="Ask FitBuddy something...">
+
+    <button onclick="askFitBuddy()">Ask AI</button>
+
+    <div id="chatAnswer" class="chat-answer"></div>
+
+</section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
