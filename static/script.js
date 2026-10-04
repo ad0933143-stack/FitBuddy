@@ -11,7 +11,7 @@ document.getElementById("fitnessForm").addEventListener("submit", async function
     };
 
     const response = await 
-    fetch('/generate_plan", {
+    fetch('/generate_plan', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
